@@ -1,0 +1,79 @@
+{
+  "families": {
+    "definition": "家庭任务许可与可联系安排。",
+    "columns": {
+      "family": "家庭",
+      "region": "区域",
+      "allowed_tasks": "允许任务",
+      "start_hour": "UTC可接受小时",
+      "end_hour": "结束小时"
+    }
+  },
+  "robots": {
+    "definition": "设备能力是声明，仍需证据支撑。",
+    "columns": {
+      "robot": "设备",
+      "family": "家庭",
+      "version": "能力版本",
+      "tasks": "声明任务"
+    }
+  },
+  "history": {
+    "definition": "一次任务有独立结果；不预先计算成功率。",
+    "columns": {
+      "id": "任务",
+      "family": "家庭",
+      "robot": "设备",
+      "version": "能力版本",
+      "task": "类型",
+      "object": "物品",
+      "environment": "环境",
+      "occurred": "发生",
+      "outcome": "independent/handoff/refused/unknown",
+      "reviewed": "人工复核"
+    }
+  },
+  "consent": {
+    "definition": "任务与采集范围分开，任务撤回不抹掉已发生事实。",
+    "columns": {
+      "id": "授权",
+      "family": "家庭",
+      "scope": "service/task或analysis",
+      "effective": "时点",
+      "status": "active/revoked"
+    }
+  },
+  "staff": {
+    "definition": "接管需要区域与任务资格，同时保障即实际占用。",
+    "columns": {
+      "staff": "工作人员",
+      "regions": "区域",
+      "tasks": "资格",
+      "start": "开始",
+      "end": "结束"
+    }
+  },
+  "requests": {
+    "definition": "请求包含期望时间和使用环境。",
+    "columns": {
+      "request": "请求",
+      "family": "家庭",
+      "task": "任务",
+      "earliest": "起点",
+      "latest": "终点",
+      "minutes": "预计时长",
+      "object": "物品",
+      "environment": "环境"
+    }
+  },
+  "task_policy": {
+    "definition": "最低证据只用于允许考虑机器人主办，仍要披露估计风险。",
+    "columns": {
+      "task": "任务",
+      "min_observations": "版本/任务组合最低量",
+      "min_reviewed": "最低已复核量",
+      "max_unknown_fraction": "未知上限",
+      "review_required": "复查必要"
+    }
+  }
+}

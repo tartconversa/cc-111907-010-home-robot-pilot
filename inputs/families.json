@@ -1,0 +1,30 @@
+[
+  {
+    "family": "F1",
+    "region": "north",
+    "allowed_tasks": [
+      "drink",
+      "retrieve"
+    ],
+    "start_hour": 8,
+    "end_hour": 12
+  },
+  {
+    "family": "F2",
+    "region": "north",
+    "allowed_tasks": [
+      "retrieve"
+    ],
+    "start_hour": 9,
+    "end_hour": 17
+  },
+  {
+    "family": "F3",
+    "region": "south",
+    "allowed_tasks": [
+      "drink"
+    ],
+    "start_hour": 10,
+    "end_hour": 16
+  }
+]

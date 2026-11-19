@@ -1,4 +1,0 @@
-task_id,household_id,task_type,requested_utc,outcome,confirmed
-t1,h-1,drink-delivery,2026-11-18T08:00:00Z,attempted,false
-t2,h-1,drink-delivery,2026-11-18T08:10:00Z,staff-handoff,true
-t3,h-2,object-retrieval,2026-11-18T09:00:00Z,completed,true

@@ -1,3 +1,0 @@
-policy_id,task_type,consent_scope,max_stage,review_required,capability_family
-p1,drink-delivery,task-telemetry,pilot,true,liquid-handling
-p2,object-retrieval,task-telemetry,pilot,true,object-handling

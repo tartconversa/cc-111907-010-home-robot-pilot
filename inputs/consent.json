@@ -1,0 +1,51 @@
+[
+  {
+    "id": "C1",
+    "family": "F1",
+    "scope": "service/drink",
+    "effective": "2026-10-20T00:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "C2",
+    "family": "F1",
+    "scope": "service/retrieve",
+    "effective": "2026-10-20T00:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "C3",
+    "family": "F1",
+    "scope": "analysis",
+    "effective": "2026-10-20T00:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "C4",
+    "family": "F2",
+    "scope": "service/retrieve",
+    "effective": "2026-10-20T00:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "C5",
+    "family": "F2",
+    "scope": "analysis",
+    "effective": "2026-10-20T00:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "C6",
+    "family": "F3",
+    "scope": "service/drink",
+    "effective": "2026-10-20T00:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "C7",
+    "family": "F3",
+    "scope": "analysis",
+    "effective": "2026-10-20T00:00:00Z",
+    "status": "active"
+  }
+]

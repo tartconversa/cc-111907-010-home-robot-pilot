@@ -1,0 +1,16 @@
+[
+  {
+    "task": "drink",
+    "min_observations": 15,
+    "min_reviewed": 5,
+    "max_unknown_fraction": 0.25,
+    "review_required": true
+  },
+  {
+    "task": "retrieve",
+    "min_observations": 10,
+    "min_reviewed": 4,
+    "max_unknown_fraction": 0.3,
+    "review_required": true
+  }
+]

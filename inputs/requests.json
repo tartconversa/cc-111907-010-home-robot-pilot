@@ -1,0 +1,32 @@
+[
+  {
+    "request": "Q1",
+    "family": "F1",
+    "task": "drink",
+    "earliest": "2026-11-19T10:00:00Z",
+    "latest": "2026-11-19T11:00:00Z",
+    "minutes": 30,
+    "object": "cup",
+    "environment": "clear"
+  },
+  {
+    "request": "Q2",
+    "family": "F3",
+    "task": "drink",
+    "earliest": "2026-11-19T10:00:00Z",
+    "latest": "2026-11-19T11:00:00Z",
+    "minutes": 30,
+    "object": "cup",
+    "environment": "crowded"
+  },
+  {
+    "request": "Q3",
+    "family": "F2",
+    "task": "retrieve",
+    "earliest": "2026-11-19T10:00:00Z",
+    "latest": "2026-11-19T12:00:00Z",
+    "minutes": 30,
+    "object": "box",
+    "environment": "clear"
+  }
+]

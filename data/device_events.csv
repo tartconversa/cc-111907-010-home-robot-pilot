@@ -1,4 +1,0 @@
-event_id,household_id,device,event,occurred_utc,capability_version
-d1,h-1,r-1,maintenance-start,2026-11-18T07:00:00Z,v2
-d2,h-1,r-1,maintenance-end,2026-11-18T08:20:00Z,v2
-d3,h-2,r-2,capability-update,2026-11-18T10:00:00Z,v1

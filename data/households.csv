@@ -1,4 +1,0 @@
-household_id,region,capacity_slot,stage
-h-1,north,1,pilot
-h-2,north,1,pilot
-h-3,south,1,waitlist

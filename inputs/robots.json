@@ -1,0 +1,27 @@
+[
+  {
+    "robot": "R1",
+    "family": "F1",
+    "version": "v2",
+    "tasks": [
+      "drink",
+      "retrieve"
+    ]
+  },
+  {
+    "robot": "R2",
+    "family": "F2",
+    "version": "v1",
+    "tasks": [
+      "retrieve"
+    ]
+  },
+  {
+    "robot": "R3",
+    "family": "F3",
+    "version": "v2",
+    "tasks": [
+      "drink"
+    ]
+  }
+]
