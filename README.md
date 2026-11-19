@@ -1,11 +1,11 @@
-# Offline analytics input set
+# 离线分析输入集
 
-Synthetic household robot task requests, capability declarations, consent, maintenance, and staff review. All records are synthetic and use UTC where timestamps are present.
+本项目包含本地合成的业务记录和只读基线检查。时间字段统一使用 UTC；这些资料仅用于本地开发与验证。
 
-## Environment
+## 环境
 
-Python 3.11 or newer; standard library only. No network access is required.
+需要 Python 3.11 或更新版本，仅使用标准库，不需要网络服务或额外依赖。
 
-## Baseline check
+## 检查
 
-Run `python -m unittest discover -s tests` from this directory to verify the supplied CSV files can be read and have unique row identifiers.
+在项目目录运行 `python -m unittest discover -s tests`，检查 CSV 文件可读取、具有表头和记录。
