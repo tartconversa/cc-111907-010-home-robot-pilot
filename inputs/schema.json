@@ -75,5 +75,15 @@
       "max_unknown_fraction": "未知上限",
       "review_required": "复查必要"
     }
+  },
+  "maintenance": {
+    "definition": "维护是设备不可用区间，后续可以补交延期事实。",
+    "columns": {
+      "id": "维护记录",
+      "robot": "设备",
+      "start": "不可用起点",
+      "end": "不可用终点",
+      "received": "已知时刻"
+    }
   }
 }
