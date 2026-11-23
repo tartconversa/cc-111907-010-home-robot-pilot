@@ -1,13 +1,56 @@
 # 家庭服务机器人试点的任务承诺与安全复查
 
-此仓库包含业务开发所需的合成输入、字段契约及资料完整性检查，业务应用尚未开发。`INPUT_CONTRACT.md` 与 `inputs/schema.json` 说明业务事实含义，输入不包含预计算建议、处置结果或规划答案。
+本目录是一个**本地持续运营**的决策应用：把家庭允许的任务、设备能力证据、历史尝试、
+工作人员覆盖与维护安排放在同一个分析里，回答：
 
-## 环境与资料检查
+- 家庭：哪些请求已经承接、哪些仍在等待确认。
+- 运营：哪里需要补充人工、哪里证据太薄、哪类服务应暂停或改派。
 
-使用 Python 3.14，仅依赖标准库。运行 `python -m unittest discover -s tests -v` 检查资料字段、时间和清单哈希。该命令只检查输入集，不验收尚未实现的应用。
+应用不连接真实机器人，不下发物理动作。全部使用 `inputs/` 中的合成资料与本地
+SQLite 状态。仅依赖 Python 3.14 标准库。
 
-容器环境以 Dockerfile 中的公开基础镜像摘要锁定。在本目录执行 `docker build -t local-analytics-inputs .`，然后执行 `docker run --rm --network none local-analytics-inputs` 可独立复核资料。
+## 快速演示
 
-## 开发与运行
+```bash
+python -m service_pilot -w work init --now 2026-11-19T08:00:00Z
+python -m service_pilot -w work ops overview --now 2026-11-19T08:05:00Z
+python -m service_pilot -w work ops assess Q1 --now 2026-11-19T08:05:00Z
+```
 
-请根据业务需求实现应用，为最终使用入口、工作目录、人工操作和业务测试补充中文说明。正式业务演练使用本地输入和本地状态，不需要真实外部账号。业务功能完成前没有可宣称通过的分析或规划结果。
+完整中文说明见 [`docs/使用说明.md`](docs/使用说明.md)，扩展资料格式见
+[`docs/扩展资料契约.md`](docs/扩展资料契约.md)。
+
+## 资料检查与测试
+
+```bash
+# 原有来源完整性检查 + 业务行为测试（共 52 项：来源契约 3 项，业务 49 项）
+python -m unittest discover -s tests -v
+```
+
+原有 `tests/test_source_contract.py` 检查清单哈希、字段与时间格式，未作修改。
+新增的 `tests/test_pilot.py` 覆盖统计分层、机器人主办门槛、保障独占、并发确认、
+维护/复查/授权影响、替代安排、回溯、去重/冲突、隐私与工作目录隔离。
+
+容器测试入口仍为 `python -m unittest discover -s tests -v`，不需要网络或外部账号。
+这些测试只使用合成资料与临时工作目录，不会访问真实机器人。
+
+## 容器复核
+
+容器环境以 Dockerfile 中的公开基础镜像摘要锁定。在本目录执行：
+
+```bash
+docker build -t local-analytics-inputs .
+docker run --rm --network none local-analytics-inputs
+```
+
+可独立复核资料完整性。业务应用本身可直接在本机用 Python 3.14 运行。
+
+## 目录
+
+```
+service_pilot/   应用（CLI、证据、规划、操作、家庭入口、视图、SQLite 状态）
+tests/           来源契约测试 + 业务测试
+docs/            中文使用说明、扩展资料契约、可直接导入的合成变更示例
+inputs/          只读合成来源资料
+work/            运行后生成的工作目录（每个目录独立）
+```
